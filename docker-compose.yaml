@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  opensprinkler:
+    container_name: opensprinkler
+    build:
+      context: .
+#      dockerfile: Dockerfile
+    ports:
+      - "9090:8080"
+    restart: always
+    volumes:
+      - /hdd/docker_volumes/opensprinkler/data:/data
+      - /sys:/sys
